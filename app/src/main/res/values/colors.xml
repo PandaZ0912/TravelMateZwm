@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- res/values/colors.xml -->
+<resources>
+    <!-- 主色调 -->
+    <color name="primaryColor">#008060</color> <!-- 青绿色 -->
+    <color name="primaryDarkColor">#005940</color> <!-- 深青绿色 -->
+    <color name="primaryLightColor">#70C8A0</color> <!-- 浅青绿色 -->
+    <color name="primaryLight">#C8E6C9</color> <!-- 浅绿色，主色背景 -->
+    <color name="primaryDark">#388E3C</color> <!-- 深绿色，强调用 -->
+
+    <!-- 二级色调 -->
+    <color name="secondaryColor">#00BFA5</color> <!-- 水绿色 -->
+    <color name="secondaryDarkColor">#008374</color> <!-- 深水绿色 -->
+    <color name="secondaryLightColor">#66D9C4</color> <!-- 浅水绿色 -->
+
+    <!-- 背景色 -->
+    <color name="backgroundColor">#F5F5F5</color> <!-- 浅灰色背景 -->
+
+    <!-- 搜索框背景色 -->
+    <color name="searchPrimaryTextColor">#212121</color> <!-- 深灰色 -->
+    <color name="searchBackgroundColor">#E0E0E0</color> <!-- 浅灰色 -->
+
+
+    <!-- 文字颜色 -->
+    <color name="primaryTextColor">#212121</color> <!-- 深灰色文字 -->
+    <color name="primaryRColor">#D32F2F</color> <!-- 热门帖子红色 -->
+    <color name="primaryRLight">#FFCDD2</color> <!-- 热门帖子浅红色 -->
+
+    <!-- 热门帖子（红色系） -->
+    <color name="hotBackground">#FFEBEE</color> <!-- 浅红色背景 -->
+    <color name="hotTextColor">#D32F2F</color> <!-- 深红色文本颜色 -->
+
+    <!-- 景区推荐（绿色系） -->
+    <color name="spotBackground">#C8E6C9</color> <!-- 浅绿色背景 -->
+    <color name="spotTextColor">#388E3C</color> <!-- 深绿色文本颜色 -->
+    <color name="spotIconColor">#388E3C</color> <!-- 深绿色图标颜色 -->
+
+    <!-- 美食推荐（橙色系） -->
+    <color name="foodBackground">#FFF3E0</color> <!-- 浅橙色背景 -->
+    <color name="foodTextColor">#FF5722</color> <!-- 深橙色文本颜色 -->
+    <color name="foodIconColor">#FF5722</color> <!-- 深橙色图标颜色 -->
+
+    <!-- 民宿推荐（紫色系） -->
+    <color name="hotelBackground">#F3E5F5</color> <!-- 浅紫色背景 -->
+    <color name="hotelTextColor">#9C27B0</color> <!-- 深紫色文本颜色 -->
+    <color name="hotelIconColor">#9C27B0</color> <!-- 深紫色图标颜色 -->
+
+    <!-- 白色背景（共用背景） -->
+    <color name="white">#FFFFFF</color>
+
+    <!-- 文本颜色 -->
+    <color name="textColorPrimary">#FFFFFF</color> <!-- 白色 -->
+    <color name="textColorSecondary">#000000</color> <!-- 黑色 -->
+
+    <!-- 其他颜色 -->
+    <color name="bottom_nav_item_color">#008060</color> <!-- 底部导航栏图标颜色 -->
+    <color name="colorAccent">#03DAC5</color> <!-- 青绿色 -->
+
+    <color name="textPrimary">#212121</color>
+    <color name="textSecondary">#757575</color>
+    <color name="gray">#9E9E9E</color>
+</resources>

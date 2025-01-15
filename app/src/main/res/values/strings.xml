@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TravelMate</string>
+    <string name="hint_username">用户名</string>
+    <string name="hint_password">密码</string>
+    <string name="button_login">登录</string>
+    <string name="button_register_link">立即注册</string>
+    <string name="button_register">注册</string>
+
+    <string name="tab_home">首页</string>
+    <string name="tab_explore">探索</string>
+    <string name="tab_bookings">行程</string>
+    <string name="tab_settings">设置</string>
+    <string name="button_login_link">已有账号</string>
+
+    <string name="hint_email">邮箱</string>
+    <string name="hint_confirm_password">确认密码</string>
+
+    <!-- 欢迎消息 -->
+    <string name="welcome_message">欢迎，%1$s</string>
+    <!-- 推荐目的地标题 -->
+    <string name="recommendations_title">推荐目的地</string>
+    <!-- 特色景点标题 -->
+    <string name="special_places_title">特色景点</string>
+    <!-- 旅行小贴士标题 -->
+    <string name="travel_tips_title">旅行小贴士</string>
+
+    <!-- 图片描述 -->
+    <string name="destination_image">目的地图片</string>
+    <string name="special_place_image">特色景点图片</string>
+    <string name="hint_phone">手机号码</string>
+    <string name="search_hint">搜索景点、活动或美食</string>
+    <string name="recommended">为你推荐</string>
+    <string name="tab_travel_earch">行程查询</string>
+    <string name="tab_order_search">订单查询</string>
+</resources>

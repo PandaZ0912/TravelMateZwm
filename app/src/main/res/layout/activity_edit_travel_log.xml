@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- 标题输入框 -->
+    <EditText
+        android:id="@+id/log_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="旅行日志标题" />
+
+    <!-- 内容输入框 -->
+    <EditText
+        android:id="@+id/log_content"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:hint="旅行日志内容"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:scrollbars="vertical" />
+
+    <!-- 地点输入框 -->
+    <EditText
+        android:id="@+id/log_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="旅行地点" />
+
+    <!-- 日期输入框 -->
+    <EditText
+        android:id="@+id/log_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="旅行日期" />
+
+    <!-- 保存按钮 -->
+    <Button
+        android:id="@+id/save_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="保存旅行日志"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

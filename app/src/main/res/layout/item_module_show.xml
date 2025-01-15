@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp"
+    android:layout_margin="8dp">  <!-- 每个模块的间距 -->
+
+    <!-- 图标 -->
+    <ImageView
+        android:id="@+id/module_icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/module_title"
+        android:layout_marginEnd="16dp"
+        android:src="@drawable/ic_hotel_icon"
+        android:contentDescription="Module Icon"/>
+
+    <!-- 标题 -->
+    <TextView
+        android:id="@+id/module_title"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="酒店民宿"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/module_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="8dp"/>
+
+    <!-- 描述 -->
+    <TextView
+        android:id="@+id/module_description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="预定酒店和民宿"
+        android:textSize="14sp"
+        android:textColor="#000000"
+        app:layout_constraintStart_toEndOf="@id/module_icon"
+        app:layout_constraintTop_toBottomOf="@id/module_title"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="4dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

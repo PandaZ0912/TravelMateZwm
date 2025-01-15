@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="16dp"
+    android:background="@color/white">
+
+    <!-- 左侧城市分类 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/left_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:scrollbars="vertical"
+        android:layout_marginEnd="8dp"
+        android:background="@color/white"/>
+
+    <!-- 右侧酒店列表 -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/right_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:scrollbars="vertical"/>
+</LinearLayout>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:layout_marginBottom="8dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="8dp"
+    android:backgroundTint="@android:color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 交通工具信息 -->
+        <TextView
+            android:id="@+id/transport_train_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="车次名称"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"/>
+
+        <!-- 出发时间 -->
+        <TextView
+            android:id="@+id/transport_departure_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="出发时间"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"/>
+
+        <!-- 到达时间 -->
+        <TextView
+            android:id="@+id/transport_arrival_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="到达时间"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"/>
+
+        <!-- 出发站、到达站 -->
+        <TextView
+            android:id="@+id/transport_route"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="出发站 - 到达站"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"/>
+
+        <!-- 票价和座位类型 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/transport_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="¥0.00"
+                android:textSize="16sp"
+                android:textColor="@android:color/holo_red_dark"/>
+
+            <TextView
+                android:id="@+id/transport_seat_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="座位类型"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:layout_marginStart="16dp"/>
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
