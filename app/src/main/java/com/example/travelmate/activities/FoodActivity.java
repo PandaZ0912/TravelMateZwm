@@ -1,6 +1,7 @@
 package com.example.travelmate.activities;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -31,6 +32,7 @@ public class FoodActivity extends AppCompatActivity {
     private final List<FoodItem> shanghaiFood = new ArrayList<>();
     private final List<FoodItem> guangzhouFood = new ArrayList<>();
     private final List<FoodItem> chengduFood = new ArrayList<>();
+    private ImageButton backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,6 +73,12 @@ public class FoodActivity extends AppCompatActivity {
 
         // 默认加载北京的美食
         loadFoodItemsByCity("北京");
+
+        backButton = findViewById(R.id.back_button);
+        // 设置返回按钮点击事件
+        backButton.setOnClickListener(view -> {
+            onBackPressed();  // 调用系统的返回操作
+        });
     }
 
     // 初始化美食数据
