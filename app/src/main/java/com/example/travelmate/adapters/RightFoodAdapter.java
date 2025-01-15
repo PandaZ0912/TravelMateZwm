@@ -1,4 +1,5 @@
 package com.example.travelmate.adapters;
+
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,11 +15,11 @@ import com.example.travelmate.models.FoodItem;
 
 import java.util.List;
 
-public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder> {
+public class RightFoodAdapter extends RecyclerView.Adapter<RightFoodAdapter.FoodViewHolder> {
 
     private List<FoodItem> foodList;
 
-    public FoodAdapter(List<FoodItem> foodList) {
+    public RightFoodAdapter(List<FoodItem> foodList) {
         this.foodList = foodList;
     }
 
@@ -34,9 +35,9 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
         FoodItem food = foodList.get(position);
         holder.foodName.setText(food.getName());
         holder.foodDescription.setText(food.getDescription());
+        holder.foodPrice.setText(String.format("¥%.2f", food.getPrice()));
+        holder.foodRating.setText(String.format("评分：%.1f", food.getRating()));
         holder.foodImage.setImageResource(food.getImageResId());
-        holder.foodPrice.setText("¥" + food.getPrice());
-        holder.foodRating.setRating((float) food.getRating());
     }
 
     @Override
@@ -44,18 +45,24 @@ public class FoodAdapter extends RecyclerView.Adapter<FoodAdapter.FoodViewHolder
         return foodList.size();
     }
 
+    // 更新食物列表
+    public void updateFoodList(List<FoodItem> newFoodList) {
+        foodList.clear();
+        foodList.addAll(newFoodList);
+        notifyDataSetChanged();
+    }
+
     public static class FoodViewHolder extends RecyclerView.ViewHolder {
-        TextView foodName, foodDescription, foodPrice;
+        TextView foodName, foodDescription, foodPrice,foodRating;
         ImageView foodImage;
-        RatingBar foodRating;
 
         public FoodViewHolder(View itemView) {
             super(itemView);
             foodName = itemView.findViewById(R.id.food_name);
             foodDescription = itemView.findViewById(R.id.food_description);
             foodPrice = itemView.findViewById(R.id.food_price);
-            foodImage = itemView.findViewById(R.id.food_image);
             foodRating = itemView.findViewById(R.id.food_rating);
+            foodImage = itemView.findViewById(R.id.food_image);
         }
     }
 }

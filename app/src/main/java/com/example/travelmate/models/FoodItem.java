@@ -1,19 +1,18 @@
 package com.example.travelmate.models;
 
 public class FoodItem {
-
     private String name;
     private String description;
+    private float rating;
+    private double price;
     private int imageResId;
-    private double rating;
-    private int price;
 
-    public FoodItem(String name, String description, int imageResId, double rating, int price) {
+    public FoodItem(String name, String description, float rating, double price, int imageResId) {
         this.name = name;
         this.description = description;
-        this.imageResId = imageResId;
         this.rating = rating;
         this.price = price;
+        this.imageResId = imageResId;
     }
 
     public String getName() {
@@ -24,16 +23,15 @@ public class FoodItem {
         return description;
     }
 
-    public int getImageResId() {
-        return imageResId;
-    }
-
-    public double getRating() {
+    public float getRating() {
         return rating;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
-}
 
+    public int getImageResId() {
+        return imageResId;
+    }
+}

@@ -56,46 +56,17 @@
             android:textStyle="bold"
             android:layout_marginBottom="8dp"/>
 
-        <!-- 评分条部分 -->
-        <LinearLayout
-            android:orientation="horizontal"
-            android:gravity="start"
-            android:layout_width="match_parent"
+        <!-- 评分数值部分 -->
+        <TextView
+            android:id="@+id/ticket_rating"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:weightSum="0.8"
-            android:layout_marginBottom="8dp">
+            android:text="评分：4.5"
+            android:textSize="16sp"
+            android:textColor="@color/hotTextColor"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
 
-            <!-- 评分条 -->
-            <RatingBar
-                android:id="@+id/ticket_rating"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="0.7"
-                android:numStars="5"
-                android:rating="4.5"
-                android:stepSize="0.5"
-                android:isIndicator="true"
-                android:layout_marginEnd="8dp"
-                android:scaleX="0.8"
-                android:scaleY="0.8"
-                android:progressTint="@android:color/holo_orange_light"
-                android:secondaryProgressTint="@android:color/darker_gray"
-                android:contentDescription="评分" />
-
-            <!-- 评分文字 -->
-            <TextView
-                android:id="@+id/ticket_rating_text"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="4.5"
-                android:textSize="16sp"
-                android:textColor="@color/hotTextColor"
-                android:textStyle="bold"
-                android:layout_gravity="center_vertical"
-                android:layout_marginStart="8dp"
-                android:letterSpacing="0.05"
-                android:layout_marginTop="2dp"/>
-        </LinearLayout>
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

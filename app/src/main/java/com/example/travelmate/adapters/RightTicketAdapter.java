@@ -4,7 +4,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RatingBar;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -36,7 +35,10 @@ public class RightTicketAdapter extends RecyclerView.Adapter<RightTicketAdapter.
         holder.ticketName.setText(ticket.getName());
         holder.ticketDescription.setText(ticket.getDescription());
         holder.ticketPrice.setText("¥" + ticket.getPrice());
-        holder.ticketRating.setRating(ticket.getRating());
+
+        // 仅设置评分数值
+        holder.ticketRating.setText(String.valueOf(ticket.getRating())); // 显示评分
+
         holder.ticketImage.setImageResource(ticket.getImageResId());
     }
 
@@ -46,8 +48,7 @@ public class RightTicketAdapter extends RecyclerView.Adapter<RightTicketAdapter.
     }
 
     public static class TicketViewHolder extends RecyclerView.ViewHolder {
-        TextView ticketName, ticketDescription, ticketPrice;
-        RatingBar ticketRating;
+        TextView ticketName, ticketDescription, ticketPrice, ticketRating; // 添加ticketRating TextView
         ImageView ticketImage;
 
         public TicketViewHolder(View itemView) {
@@ -55,7 +56,7 @@ public class RightTicketAdapter extends RecyclerView.Adapter<RightTicketAdapter.
             ticketName = itemView.findViewById(R.id.ticket_name);
             ticketDescription = itemView.findViewById(R.id.ticket_description);
             ticketPrice = itemView.findViewById(R.id.ticket_price);
-            ticketRating = itemView.findViewById(R.id.ticket_rating);
+            ticketRating = itemView.findViewById(R.id.ticket_rating); // 修改为TextView
             ticketImage = itemView.findViewById(R.id.ticket_image);
         }
     }
