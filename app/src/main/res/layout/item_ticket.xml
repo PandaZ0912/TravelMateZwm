@@ -1,64 +1,101 @@
-<?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_margin="8dp"
-    app:cardElevation="4dp"
-    app:cardCornerRadius="8dp">
+    app:cardElevation="8dp"
+    app:cardCornerRadius="12dp"
+    android:backgroundTint="@android:color/white">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:padding="16dp">
 
+        <!-- 图片部分 -->
         <ImageView
             android:id="@+id/ticket_image"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
             android:src="@drawable/ic_ticket_icon"
-            android:layout_marginEnd="16dp"/>
+            android:scaleType="centerCrop"
+            android:clipToOutline="true"
+            android:layout_marginBottom="16dp"
+            android:contentDescription="图片" />
 
-        <LinearLayout
-            android:layout_width="0dp"
+        <!-- 门票名称 -->
+        <TextView
+            android:id="@+id/ticket_name"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_weight="1">
+            android:text="门票名称"
+            android:textSize="18sp"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
 
-            <TextView
-                android:id="@+id/ticket_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="门票名称"
-                android:textSize="18sp"
-                android:textColor="@android:color/black"/>
+        <!-- 描述 -->
+        <TextView
+            android:id="@+id/ticket_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="景区描述"
+            android:textSize="14sp"
+            android:textColor="@android:color/darker_gray"
+            android:layout_marginBottom="8dp"/>
 
-            <TextView
-                android:id="@+id/ticket_description"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="景区描述"
-                android:textSize="14sp"
-                android:textColor="@android:color/darker_gray"/>
+        <!-- 价格 -->
+        <TextView
+            android:id="@+id/ticket_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="¥0.00"
+            android:textSize="16sp"
+            android:textColor="@android:color/holo_red_dark"
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp"/>
 
-            <TextView
-                android:id="@+id/ticket_price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="¥0.00"
-                android:textSize="16sp"
-                android:textColor="@android:color/holo_red_dark"/>
+        <!-- 评分条部分 -->
+        <LinearLayout
+            android:orientation="horizontal"
+            android:gravity="start"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="0.8"
+            android:layout_marginBottom="8dp">
 
+            <!-- 评分条 -->
             <RatingBar
                 android:id="@+id/ticket_rating"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="0.7"
                 android:numStars="5"
                 android:rating="4.5"
-                android:stepSize="0.1"
-                android:isIndicator="true"/>
-        </LinearLayout>
+                android:stepSize="0.5"
+                android:isIndicator="true"
+                android:layout_marginEnd="8dp"
+                android:scaleX="0.8"
+                android:scaleY="0.8"
+                android:progressTint="@android:color/holo_orange_light"
+                android:secondaryProgressTint="@android:color/darker_gray"
+                android:contentDescription="评分" />
 
+            <!-- 评分文字 -->
+            <TextView
+                android:id="@+id/ticket_rating_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="4.5"
+                android:textSize="16sp"
+                android:textColor="@color/hotTextColor"
+                android:textStyle="bold"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="8dp"
+                android:letterSpacing="0.05"
+                android:layout_marginTop="2dp"/>
+        </LinearLayout>
     </LinearLayout>
+
 </androidx.cardview.widget.CardView>

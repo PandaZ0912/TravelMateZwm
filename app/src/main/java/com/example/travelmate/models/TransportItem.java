@@ -2,26 +2,29 @@ package com.example.travelmate.models;
 
 public class TransportItem {
 
-    private String trainName;
-    private String departureTime;
-    private String arrivalTime;
-    private String fromStation;
-    private String toStation;
-    private int price;
-    private String seatType;
+    private String trainNo;         // 列车号
+    private String departureTime;   // 出发时间
+    private String arrivalTime;     // 到达时间
+    private String departure;       // 出发地点
+    private String arrival;         // 到达地点
+    private double price;           // 票价，建议使用 double 类型，以支持小数
+    private String seatType;        // 座位类型
 
-    public TransportItem(String trainName, String departureTime, String arrivalTime, String fromStation, String toStation, int price, String seatType) {
-        this.trainName = trainName;
+    // 构造方法
+    public TransportItem(String trainNo, String departureTime, String arrivalTime,
+                         String departure, String arrival, double price, String seatType) {
+        this.trainNo = trainNo;
         this.departureTime = departureTime;
         this.arrivalTime = arrivalTime;
-        this.fromStation = fromStation;
-        this.toStation = toStation;
+        this.departure = departure;
+        this.arrival = arrival;
         this.price = price;
         this.seatType = seatType;
     }
 
-    public String getTrainName() {
-        return trainName;
+    // Getter 方法
+    public String getTrainNo() {
+        return trainNo;
     }
 
     public String getDepartureTime() {
@@ -32,19 +35,24 @@ public class TransportItem {
         return arrivalTime;
     }
 
-    public String getFromStation() {
-        return fromStation;
+    public String getDeparture() {
+        return departure;
     }
 
-    public String getToStation() {
-        return toStation;
+    public String getArrival() {
+        return arrival;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
 
     public String getSeatType() {
         return seatType;
+    }
+
+    // 设置价格的 Getter 和 Setter（如果需要）
+    public void setPrice(double price) {
+        this.price = price;
     }
 }

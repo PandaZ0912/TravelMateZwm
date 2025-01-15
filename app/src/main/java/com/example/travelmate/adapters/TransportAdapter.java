@@ -1,60 +1,92 @@
 package com.example.travelmate.adapters;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.travelmate.R;
+import com.example.travelmate.activities.PurchaseActivity;
 import com.example.travelmate.models.TransportItem;
 
 import java.util.List;
 
 public class TransportAdapter extends RecyclerView.Adapter<TransportAdapter.TransportViewHolder> {
 
-    private List<TransportItem> transportList;
+    private List<TransportItem> transportItemList;
+    private Context context;  // 声明 context
 
-    public TransportAdapter(List<TransportItem> transportList) {
-        this.transportList = transportList;
+    // 通过构造函数传递 context
+    public TransportAdapter(Context context, List<TransportItem> transportItemList) {
+        this.context = context;
+        this.transportItemList = transportItemList;
     }
 
-    @NonNull
     @Override
-    public TransportViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public TransportViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.item_transport, parent, false);
         return new TransportViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull TransportViewHolder holder, int position) {
-        TransportItem transport = transportList.get(position);
-        holder.trainName.setText(transport.getTrainName());
-        holder.departureTime.setText("出发时间: " + transport.getDepartureTime());
-        holder.arrivalTime.setText("到达时间: " + transport.getArrivalTime());
-        holder.route.setText(transport.getFromStation() + " - " + transport.getToStation());
-        holder.price.setText("¥" + transport.getPrice());
-        holder.seatType.setText(transport.getSeatType());
+    public void onBindViewHolder(TransportViewHolder holder, int position) {
+        TransportItem transportItem = transportItemList.get(position);
+
+        // Set data to views
+        holder.trainNoTextView.setText(transportItem.getTrainNo());
+        holder.departureTimeTextView.setText(transportItem.getDepartureTime());
+        holder.arrivalTimeTextView.setText(transportItem.getArrivalTime());
+        holder.departureTextView.setText(transportItem.getDeparture());
+        holder.arrivalTextView.setText(transportItem.getArrival());
+        holder.priceTextView.setText(String.format("¥ %.2f", transportItem.getPrice()));
+        holder.seatTypeTextView.setText(transportItem.getSeatType());
+
+        // 设置点击事件
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // 启动购买页面，并传递数据
+                Intent intent = new Intent(context, PurchaseActivity.class);
+                intent.putExtra("trainName", transportItem.getTrainNo());
+                intent.putExtra("departureTime", transportItem.getDepartureTime());
+                intent.putExtra("arrivalTime", transportItem.getArrivalTime());
+                intent.putExtra("fromStation", transportItem.getDeparture());
+                intent.putExtra("toStation", transportItem.getArrival());
+                intent.putExtra("price", transportItem.getPrice());
+                intent.putExtra("seatType", transportItem.getSeatType());
+                context.startActivity(intent);
+            }
+        });
     }
 
     @Override
     public int getItemCount() {
-        return transportList.size();
+        return transportItemList.size();
     }
 
     public static class TransportViewHolder extends RecyclerView.ViewHolder {
-        TextView trainName, departureTime, arrivalTime, route, price, seatType;
+
+        TextView trainNoTextView;
+        TextView departureTimeTextView;
+        TextView arrivalTimeTextView;
+        TextView departureTextView;
+        TextView arrivalTextView;
+        TextView priceTextView;
+        TextView seatTypeTextView;
 
         public TransportViewHolder(View itemView) {
             super(itemView);
-            trainName = itemView.findViewById(R.id.transport_train_name);
-            departureTime = itemView.findViewById(R.id.transport_departure_time);
-            arrivalTime = itemView.findViewById(R.id.transport_arrival_time);
-            route = itemView.findViewById(R.id.transport_route);
-            price = itemView.findViewById(R.id.transport_price);
-            seatType = itemView.findViewById(R.id.transport_seat_type);
+            trainNoTextView = itemView.findViewById(R.id.train_no);
+            departureTimeTextView = itemView.findViewById(R.id.departure_time);
+            arrivalTimeTextView = itemView.findViewById(R.id.arrival_time);
+            departureTextView = itemView.findViewById(R.id.departure);
+            arrivalTextView = itemView.findViewById(R.id.arrival);
+            priceTextView = itemView.findViewById(R.id.price);
+            seatTypeTextView = itemView.findViewById(R.id.seat_type);
         }
     }
 }

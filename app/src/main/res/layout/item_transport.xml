@@ -1,79 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="8dp"
+    android:orientation="vertical"
+    android:padding="16dp"
     android:layout_marginBottom="8dp"
-    app:cardElevation="4dp"
-    app:cardCornerRadius="8dp"
-    android:backgroundTint="@android:color/white">
+    android:background="@color/white"
+    android:elevation="2dp">
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <!-- 列车号 -->
+    <TextView
+        android:id="@+id/train_no"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:padding="16dp">
+        android:text="列车号"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="@color/primaryTextColor"/>
 
-        <!-- 交通工具信息 -->
-        <TextView
-            android:id="@+id/transport_train_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="车次名称"
-            android:textSize="18sp"
-            android:textColor="@android:color/black"/>
+    <!-- 出发时间 -->
+    <TextView
+        android:id="@+id/departure_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2025-01-05 08:30"
+        android:textSize="14sp"
+        android:textColor="@color/primaryColor"
+        android:layout_marginTop="4dp"/>
 
-        <!-- 出发时间 -->
-        <TextView
-            android:id="@+id/transport_departure_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="出发时间"
-            android:textSize="14sp"
-            android:textColor="@android:color/darker_gray"/>
+    <!-- 到达时间 -->
+    <TextView
+        android:id="@+id/arrival_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2025-01-05 10:30"
+        android:textSize="14sp"
+        android:textColor="@color/primaryColor"
+        android:layout_marginTop="4dp"/>
 
-        <!-- 到达时间 -->
-        <TextView
-            android:id="@+id/transport_arrival_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="到达时间"
-            android:textSize="14sp"
-            android:textColor="@android:color/darker_gray"/>
+    <!-- 出发地点 -->
+    <TextView
+        android:id="@+id/departure"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="北京"
+        android:textSize="14sp"
+        android:textColor="@color/primaryRColor"
+        android:layout_marginTop="4dp"/>
 
-        <!-- 出发站、到达站 -->
-        <TextView
-            android:id="@+id/transport_route"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="出发站 - 到达站"
-            android:textSize="14sp"
-            android:textColor="@android:color/darker_gray"/>
+    <!-- 到达地点 -->
+    <TextView
+        android:id="@+id/arrival"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="上海"
+        android:textSize="14sp"
+        android:textColor="@color/primaryRColor"
+        android:layout_marginTop="4dp"/>
 
-        <!-- 票价和座位类型 -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+    <!-- 票价 -->
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="¥ 500"
+        android:textSize="14sp"
+        android:textColor="@color/primaryTextColor"
+        android:layout_marginTop="4dp"/>
 
-            <TextView
-                android:id="@+id/transport_price"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="¥0.00"
-                android:textSize="16sp"
-                android:textColor="@android:color/holo_red_dark"/>
-
-            <TextView
-                android:id="@+id/transport_seat_type"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="座位类型"
-                android:textSize="14sp"
-                android:textColor="@android:color/black"
-                android:layout_marginStart="16dp"/>
-        </LinearLayout>
-
-    </LinearLayout>
-</androidx.cardview.widget.CardView>
+    <!-- 座位类型 -->
+    <TextView
+        android:id="@+id/seat_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="商务座"
+        android:textSize="14sp"
+        android:textColor="@color/primaryTextColor"
+        android:layout_marginTop="4dp"/>
+</LinearLayout>

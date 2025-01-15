@@ -45,6 +45,12 @@
     <color name="hotelTextColor">#9C27B0</color> <!-- 深紫色文本颜色 -->
     <color name="hotelIconColor">#9C27B0</color> <!-- 深紫色图标颜色 -->
 
+    <!-- 蓝色系颜色 -->
+    <color name="primaryBlueDark">#1976D2</color> <!-- 深蓝色 -->
+    <color name="primaryBlueLight">#BBDEFB</color> <!-- 浅蓝色 -->
+    <color name="secondaryBlue">#2196F3</color> <!-- 中等蓝色 -->
+    <color name="transparentBlue">#E3F2FD</color> <!-- 透明蓝色 -->
+
     <!-- 白色背景（共用背景） -->
     <color name="white">#FFFFFF</color>
 

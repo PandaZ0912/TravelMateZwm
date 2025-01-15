@@ -88,6 +88,11 @@
             android:exported="false"
             android:theme="@style/Theme.TravelMate">
         </activity>
+        <activity
+            android:name=".activities.PurchaseActivity"
+            android:exported="false"
+            android:theme="@style/Theme.TravelMate">
+        </activity>
     </application>
 
 </manifest>

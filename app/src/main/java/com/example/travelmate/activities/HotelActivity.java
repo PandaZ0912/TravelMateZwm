@@ -1,6 +1,7 @@
 package com.example.travelmate.activities;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -23,6 +24,7 @@ public class HotelActivity extends AppCompatActivity {
 
     private LeftCategoryAdapter leftCategoryAdapter;
     private RightHotelAdapter rightHotelAdapter;
+    private ImageButton backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +52,12 @@ public class HotelActivity extends AppCompatActivity {
         leftCategoryAdapter.setOnCategoryClickListener(category -> {
             // 根据选中的城市分类更新右侧酒店列表
             rightHotelAdapter.updateHotels(getHotels(category));
+        });
+
+        backButton = findViewById(R.id.back_button);
+        // 设置返回按钮点击事件
+        backButton.setOnClickListener(view -> {
+            onBackPressed();  // 调用系统的返回操作
         });
     }
 

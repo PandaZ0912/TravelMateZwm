@@ -1,6 +1,7 @@
 package com.example.travelmate.activities;
 
 import android.os.Bundle;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,6 +25,7 @@ public class TicketActivity extends AppCompatActivity {
     private RightTicketAdapter rightTicketAdapter;
 
     private Map<String, List<TicketItem>> categoryData;
+    private ImageButton backButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +46,12 @@ public class TicketActivity extends AppCompatActivity {
 
         // 监听左侧分类点击事件
         leftCategoryAdapter.setOnCategoryClickListener(category -> updateRightRecyclerView(category));
+
+        backButton = findViewById(R.id.back_button);
+        // 设置返回按钮点击事件
+        backButton.setOnClickListener(view -> {
+            onBackPressed();  // 调用系统的返回操作
+        });
     }
 
     // 获取分类列表

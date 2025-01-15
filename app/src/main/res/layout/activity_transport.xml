@@ -6,17 +6,160 @@
     android:layout_height="match_parent"
     tools:context=".activities.TransportActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/transport_recyclerview"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+    <!-- 标题栏 -->
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
         android:layout_marginTop="16dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"/>
-</androidx.constraintlayout.widget.ConstraintLayout>
+        app:layout_constraintEnd_toEndOf="parent">
 
+        <!-- 返回按钮 -->
+        <ImageButton
+            android:id="@+id/back_button"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_return_icon"
+            android:background="@color/primaryLight"
+            android:padding="8dp"
+            android:scaleType="centerInside"
+            app:tint="@color/primaryDark"
+            android:contentDescription="返回"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- 搜索框 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1.5"
+            android:orientation="horizontal"
+            android:background="@color/primaryLight"
+            android:gravity="center_vertical"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:elevation="4dp">
+
+            <ImageView
+                android:id="@+id/search_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_search_icon"
+                android:layout_marginStart="8dp"/>
+
+            <EditText
+                android:id="@+id/search_edittext"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="搜索"
+                android:textColor="@color/primaryDark"
+                android:textColorHint="@color/primaryTextColor"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:textSize="14sp"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:backgroundTint="@color/searchBackgroundColor"
+                android:importantForAccessibility="yes"
+                android:contentDescription="搜索输入框"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 出发地点标签 -->
+    <TextView
+        android:id="@+id/departure_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择出发地点"
+        android:textSize="16sp"
+        android:textColor="@color/primaryTextColor"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 出发地点选择 Spinner -->
+    <Spinner
+        android:id="@+id/spinner_departure"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/departure_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        android:background="@color/spotBackground"
+        android:elevation="2dp"/>
+
+    <!-- 到达地点标签 -->
+    <TextView
+        android:id="@+id/arrival_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="选择到达地点"
+        android:textSize="16sp"
+        android:textColor="@color/primaryTextColor"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@id/spinner_departure"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- 到达地点选择 Spinner -->
+    <Spinner
+        android:id="@+id/spinner_arrival"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/arrival_label"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintWidth_percent="0.9"
+        android:background="@color/spotBackground"
+        android:elevation="2dp"/>
+
+    <!-- 查询按钮 -->
+    <Button
+        android:id="@+id/query_button"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:backgroundTint="@color/primaryDark"
+        android:text="查询"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/spinner_arrival"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:elevation="4dp"/>
+
+    <!-- 交通工具列表 RecyclerView -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/transport_recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintTop_toBottomOf="@id/query_button"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:elevation="4dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
