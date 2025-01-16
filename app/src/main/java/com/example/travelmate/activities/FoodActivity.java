@@ -84,20 +84,20 @@ public class FoodActivity extends AppCompatActivity {
     // 初始化美食数据
     private void initFoodData() {
         // 北京美食
-        beijingFood.add(new FoodItem("北京炸酱面", "传统的北京美食", 4.8f, 30.0, R.drawable.peking_duck));
+        beijingFood.add(new FoodItem("北京炸酱面", "传统的北京美食", 4.8f, 30.0, R.drawable.beijing_noodles));
         beijingFood.add(new FoodItem("北京烤鸭", "世界著名的北京美食", 4.9f, 80.0, R.drawable.peking_duck));
 
         // 上海美食
-        shanghaiFood.add(new FoodItem("小笼包", "上海著名的点心", 4.7f, 35.0, R.drawable.peking_duck));
-        shanghaiFood.add(new FoodItem("生煎包", "美味的上海生煎包", 4.6f, 25.0, R.drawable.peking_duck));
+        shanghaiFood.add(new FoodItem("小笼包", "上海著名的点心", 4.7f, 35.0, R.drawable.xiaolongbao));
+        shanghaiFood.add(new FoodItem("生煎包", "美味的上海生煎包", 4.6f, 25.0, R.drawable.fried_buns));
 
         // 广州美食
-        guangzhouFood.add(new FoodItem("肠粉", "传统广州美食", 4.8f, 28.0, R.drawable.peking_duck));
-        guangzhouFood.add(new FoodItem("白切鸡", "广东特色白切鸡", 4.7f, 50.0, R.drawable.peking_duck));
+        guangzhouFood.add(new FoodItem("肠粉", "传统广州美食", 4.8f, 28.0, R.drawable.steamed_vermicelli_roll));
+        guangzhouFood.add(new FoodItem("白切鸡", "广东特色白切鸡", 4.7f, 50.0, R.drawable.poached_chicken));
 
         // 成都美食
-        chengduFood.add(new FoodItem("火锅", "麻辣鲜香的成都火锅", 5.0f, 100.0, R.drawable.peking_duck));
-        chengduFood.add(new FoodItem("兔头", "香辣的成都特色美食", 4.9f, 50.0, R.drawable.peking_duck));
+        chengduFood.add(new FoodItem("火锅", "麻辣鲜香的成都火锅", 5.0f, 100.0, R.drawable.chengdu_hotpot));
+        chengduFood.add(new FoodItem("钵钵鸡", "香辣的成都特色美食", 4.9f, 50.0, R.drawable.pot_chicken));
     }
 
     // 根据城市加载美食数据

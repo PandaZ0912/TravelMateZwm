@@ -66,18 +66,18 @@ public class TicketActivity extends AppCompatActivity {
 
             // 北京省份的景区
             List<TicketItem> beijingTickets = new ArrayList<>();
-            beijingTickets.add(new TicketItem("故宫", "北京的故宫博物院，是世界上最大的宫殿建筑群之一。", R.drawable.ic_ticket_icon, 60.0, 4.7f));
-            beijingTickets.add(new TicketItem("长城", "世界著名的长城，壮丽的古代建筑。", R.drawable.ic_ticket_icon, 80.0, 4.5f));
+            beijingTickets.add(new TicketItem("故宫", "北京的故宫博物院，是世界上最大的宫殿建筑群之一。", R.drawable.forbidden_city, 60.0, 4.7f));
+            beijingTickets.add(new TicketItem("长城", "世界著名的长城，壮丽的古代建筑。", R.drawable.great_wall, 80.0, 4.5f));
 
             // 上海省份的景区
             List<TicketItem> shanghaiTickets = new ArrayList<>();
-            shanghaiTickets.add(new TicketItem("东方明珠", "上海的标志性建筑，提供俯瞰城市的美丽景观。", R.drawable.ic_ticket_icon, 120.0, 4.6f));
-            shanghaiTickets.add(new TicketItem("上海迪士尼", "全球著名的主题公园，适合全家游玩。", R.drawable.ic_ticket_icon, 499.0, 4.8f));
+            shanghaiTickets.add(new TicketItem("东方明珠", "上海的标志性建筑，提供俯瞰城市的美丽景观。", R.drawable.the_oriental_pearl_tower, 120.0, 4.6f));
+            shanghaiTickets.add(new TicketItem("上海迪士尼", "全球著名的主题公园，适合全家游玩。", R.drawable.shanghai_disneyland, 499.0, 4.8f));
 
             // 云南省份的景区
             List<TicketItem> yunnanTickets = new ArrayList<>();
-            yunnanTickets.add(new TicketItem("大理古城", "大理古城，保存完好的古老城市，拥有丰富的历史文化。", R.drawable.ic_ticket_icon, 50.0, 4.3f));
-            yunnanTickets.add(new TicketItem("丽江古城", "丽江古城是中国最具历史意义的古代城市之一。", R.drawable.ic_ticket_icon, 60.0, 4.4f));
+            yunnanTickets.add(new TicketItem("大理古城", "大理古城，保存完好的古老城市，拥有丰富的历史文化。", R.drawable.dali_old_city, 50.0, 4.3f));
+            yunnanTickets.add(new TicketItem("丽江古城", "丽江古城是中国最具历史意义的古代城市之一。", R.drawable.old_town, 60.0, 4.4f));
 
             // 将数据加入到分类中
             categoryData.put("北京", beijingTickets);

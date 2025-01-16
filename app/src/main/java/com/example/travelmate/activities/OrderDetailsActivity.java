@@ -8,10 +8,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.travelmate.R;
 import com.example.travelmate.models.Order;
 
-import android.os.Bundle;
-import android.widget.TextView;
-import androidx.appcompat.app.AppCompatActivity;
-
 public class OrderDetailsActivity extends AppCompatActivity {
 
     private TextView tvOrderTitle, tvOrderDate, tvOrderPrice;
