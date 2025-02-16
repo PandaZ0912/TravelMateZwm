@@ -50,7 +50,7 @@ TravelMate 是一款集成旅行规划、日志记录、社交互动和个性化
 ### 系统组织架构
 系统组织架构类似于MVC
 <br>
-Layout文件定义了视图(View)层的界面布局
+Layout文件定义了视图（View）层的界面布局
 <br>
 Activity和Fragment文件通常充当控制器（Controller）的角色，负责处理用户交互、视图的展示和更新
 <br>
