@@ -48,8 +48,13 @@ TravelMate 是一款集成旅行规划、日志记录、社交互动和个性化
 <br>
 
 ### 系统组织架构
+<br>
 系统组织架构类似于MVC
+<br>
 Layout文件定义了视图(View)层的界面布局
+<br>
 Activity和Fragment文件通常充当控制器（Controller）的角色，负责处理用户交互、视图的展示和更新
+<br>
 Adapter文件用于管理ListView或RecyclerView等列表组件的数据绑定
-DataHelper文件可能用于管理数据库操作，即模型（Model）层的数据存取和处理。
+<br>
+DataHelper文件可能用于管理数据库操作，即模型（Model）层的数据存取和处理
