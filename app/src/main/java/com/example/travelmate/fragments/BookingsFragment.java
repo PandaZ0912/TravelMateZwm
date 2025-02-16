@@ -98,23 +98,22 @@ public class BookingsFragment extends Fragment {
     private void loadSampleData() {
         // 创建图片数据
         List<ImageData> images1 = new ArrayList<>();
-        images1.add(new ImageData(R.drawable.wuhan, ImageData.ImageSource.DRAWABLE));
-        images1.add(new ImageData(R.drawable.wuhan, ImageData.ImageSource.DRAWABLE));
+        images1.add(new ImageData(R.drawable.huanghelou, ImageData.ImageSource.DRAWABLE));
 
         List<ImageData> images2 = new ArrayList<>();
-        images2.add(new ImageData(R.drawable.wuhan, ImageData.ImageSource.DRAWABLE));
-        images2.add(new ImageData(R.drawable.wuhan, ImageData.ImageSource.DRAWABLE));
+        images2.add(new ImageData(R.drawable.wuhanuniversity, ImageData.ImageSource.DRAWABLE));
 
         List<ImageData> images3 = new ArrayList<>();
-        images3.add(new ImageData(R.drawable.wuhan, ImageData.ImageSource.DRAWABLE));
-        images3.add(new ImageData(R.drawable.wuhan, ImageData.ImageSource.DRAWABLE));
+        images3.add(new ImageData(R.drawable.hubeimuseum, ImageData.ImageSource.DRAWABLE));
 
         List<ImageData> images4 = new ArrayList<>();
         images4.add(new ImageData(R.drawable.wuhan, ImageData.ImageSource.DRAWABLE));
-        images4.add(new ImageData(R.drawable.wuhan, ImageData.ImageSource.DRAWABLE));
 
         List<ImageData> images5 = new ArrayList<>();
-        images5.add(new ImageData(R.drawable.wuhan, ImageData.ImageSource.DRAWABLE));
+        images5.add(new ImageData(R.drawable.reganmian, ImageData.ImageSource.DRAWABLE));
+
+        List<ImageData> images6 = new ArrayList<>();
+        images6.add(new ImageData(R.drawable.wuhanzhiwuyuan, ImageData.ImageSource.DRAWABLE));
 
         // 创建活动对象（武汉）
         Activity activity1 = new Activity("9:00 - 10:30", "游览黄鹤楼", "黄鹤楼", "游览武汉的地标性建筑，欣赏武汉的美丽城市风光", images1);
@@ -123,7 +122,7 @@ public class BookingsFragment extends Fragment {
 
         Activity activity4 = new Activity("9:00 - 11:00", "游览长江大桥", "长江大桥", "体验世界著名的长江大桥，感受江水的澎湃和桥梁的壮丽", images4);
         Activity activity5 = new Activity("12:00 - 14:00", "午餐：汉口老街", "汉口老街", "在武汉最具历史感的老街品尝地道的武汉美食小吃", images5);
-        Activity activity6 = new Activity("15:00 - 17:00", "游览武汉植物园", "武汉植物园", "在武汉植物园内欣赏自然景观，呼吸新鲜空气，放松心情", images1);
+        Activity activity6 = new Activity("15:00 - 17:00", "游览武汉植物园", "武汉植物园", "在武汉植物园内欣赏自然景观，呼吸新鲜空气，放松心情", images6);
 
         // 使用 Drawable 资源创建活动
         List<Activity> day1Activities = new ArrayList<>();
@@ -137,25 +136,16 @@ public class BookingsFragment extends Fragment {
         day2Activities.add(activity5);
         day2Activities.add(activity6);
 
-        // 创建第三天活动
-        Activity activity7 = new Activity("10:00 - 12:00", "游览天门山", "天门山", "挑战天门山的玻璃栈道，欣赏壮丽的自然景观", images3);
-        Activity activity8 = new Activity("13:00 - 15:00", "乘坐天门山索道", "天门山索道", "乘坐世界最长的索道，俯瞰天门山的美丽风光", images4);
-
-        List<Activity> day3Activities = new ArrayList<>();
-        day3Activities.add(activity7);
-        day3Activities.add(activity8);
-
         // 创建 DayPlan 和 Travel 对象
         List<DayPlan> dayPlans = new ArrayList<>();
         dayPlans.add(new DayPlan("3月24日", day1Activities));
         dayPlans.add(new DayPlan("3月25日", day2Activities));
-        dayPlans.add(new DayPlan("3月26日", day3Activities));
 
-        // 第一个行程：武汉与张家界
-        Travel travel1 = new Travel("武汉与张家界", "3月24日 - 3月26日", R.drawable.wuhan, dayPlans);
+        // 第一个行程：武汉
+        Travel travel1 = new Travel("武汉", "3月24日 - 3月26日", R.drawable.wuhan, dayPlans);
         travelList.add(travel1);
 
-        // 创建第二个行程：杭州与西湖（更丰富的内容）
+        // 创建活动对象（杭州）
         Activity activity9 = new Activity("9:00 - 10:30", "游览西湖", "西湖", "在西湖边散步，欣赏美丽的湖光山色，品味杭州的自然之美", images1);
         Activity activity10 = new Activity("11:00 - 12:30", "游览雷峰塔", "雷峰塔", "参观古老的雷峰塔，聆听西湖传说，俯瞰西湖全景", images2);
         Activity activity11 = new Activity("14:00 - 16:00", "游览灵隐寺", "灵隐寺", "参拜灵隐寺，体验佛教文化的宁静与深远", images3);
@@ -163,16 +153,7 @@ public class BookingsFragment extends Fragment {
         // 杭州的其他景点与活动
         Activity activity12 = new Activity("9:00 - 11:00", "西溪湿地公园", "西溪湿地", "游走在西溪湿地的自然保护区，放松身心，亲近大自然", images4);
         Activity activity13 = new Activity("12:00 - 14:00", "午餐：龙井村", "龙井村", "在龙井村品尝正宗的龙井茶和地道的杭州美食", images5);
-        Activity activity14 = new Activity("15:00 - 17:00", "杭州植物园", "杭州植物园", "在杭州植物园欣赏多样的植物品种和美丽的园林景观", images1);
-
-        // 更丰富的第二天活动
-        Activity activity15 = new Activity("9:00 - 10:30", "游览杭州博物馆", "杭州博物馆", "参观杭州博物馆，了解这座城市的历史文化遗产", images2);
-        Activity activity16 = new Activity("11:00 - 12:30", "参观宋城景区", "宋城景区", "体验宋代风情，游玩各类娱乐项目，感受古代杭州的繁荣", images3);
-        Activity activity17 = new Activity("13:00 - 14:30", "午餐：杭州特色小吃", "杭州小吃街", "品尝杭州的各类传统小吃，如西湖醋鱼、东坡肉等", images4);
-
-        // 新增第三天活动
-        Activity activity18 = new Activity("9:00 - 11:00", "游览千岛湖", "千岛湖", "在千岛湖体验划船与游览岛屿的乐趣，欣赏湖区美丽的自然景观", images5);
-        Activity activity19 = new Activity("13:00 - 15:00", "参观南宋御街", "南宋御街", "步行在保存最完好的古街区之一，了解杭州的古老商业文化", images2);
+        Activity activity14 = new Activity("15:00 - 17:00", "杭州植物园", "杭州植物园", "在杭州植物园欣赏多样的植物品种和美丽的园林景观", images6);
 
         // 使用 Drawable 资源创建活动
         List<Activity> day1Activities2 = new ArrayList<>();
@@ -185,22 +166,13 @@ public class BookingsFragment extends Fragment {
         day2Activities2.add(activity12);
         day2Activities2.add(activity13);
         day2Activities2.add(activity14);
-        day2Activities2.add(activity15);
-        day2Activities2.add(activity16);
-        day2Activities2.add(activity17);
-
-        // 创建第三天活动
-        List<Activity> day3Activities2 = new ArrayList<>();
-        day3Activities2.add(activity18);
-        day3Activities2.add(activity19);
 
         // 创建第二个行程的 DayPlan 和 Travel 对象
         List<DayPlan> dayPlans2 = new ArrayList<>();
         dayPlans2.add(new DayPlan("4月1日", day1Activities2));
         dayPlans2.add(new DayPlan("4月2日", day2Activities2));
-        dayPlans2.add(new DayPlan("4月3日", day3Activities2));
 
-        Travel travel2 = new Travel("杭州与西湖", "4月1日 - 4月3日", R.drawable.wuhan, dayPlans2);
+        Travel travel2 = new Travel("杭州", "4月1日 - 4月3日", R.drawable.hangzhou, dayPlans2);
         travelList.add(travel2);
 
         // 示例订单数据
